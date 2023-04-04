@@ -1,0 +1,63 @@
+{% load tags %}
+
+<!-- {% if do_draw and menu_item.has_children %}
+	<li>
+		<a href='{% if menu_item.url != "" %}{{ menu_item.url }}{% else %}{% url menu_item.named_url %}{% endif %}?active-menu={{ menu.name }}&level={{ menu_item.level }}&rank={{ menu_item.rank }}&parent={{ menu_item.parent.pk }}'>{{ menu_item.caption }}</a>
+		<p>{{ do_draw }}</p>
+		<p>{{ menu_item.has_children }}</p>
+		<p>{{ menu_item.parent.pk }}</p>
+		<p>{{ active_parent }}</p>
+
+		<ul>
+
+			{% if active_parent == menu_item.parent.pk and active_rank == menu_item.rank and active_level == menu_item.level %}
+				{% for child in menu_item.children %}
+					{% draw_menu_item child False %}	
+					<p>Flag has changed</p>	
+					<p>{{ do_draw }}</p>		
+				{% endfor %}
+
+			{% elif active_parent == menu_item.parent.pk and active_rank < menu_item.rank and active_level == menu_item.level %}
+				<p>BLANK</p>
+
+			{% elif active_parent == menu_item.parent.pk and active_rank > menu_item.rank and active_level == menu_item.level %}
+				{% for child in menu_item.children %}
+					{% draw_menu_item child do_draw %}				
+				{% endfor %}
+
+
+			{% else %}
+				{% for child in menu_item.children %}
+					<p>Else before</p>
+					<p>{{ do_draw }}</p>
+
+					{% draw_menu_item child do_draw %}
+
+					<p>Else</p>
+					<p>{{ do_draw }}</p>
+				{% endfor %}	
+				
+			{% endif %}
+
+		</ul>
+	</li>
+
+{% elif do_draw and not menu_item.has_children %}
+	<li>
+		<a href='{% if menu_item.url != "" %}{{ menu_item.url }}{% else %}{% url menu_item.named_url %}{% endif %}?active-menu={{ menu.name }}&level={{ menu_item.level }}&rank={{ menu_item.rank }}&parent={{ menu_item.parent.pk }}'>{{ menu_item.caption }}</a>
+		<p>{{ do_draw }}</p>
+		<p>{{ menu_item.has_children }}</p>
+		<p>{{ menu_item.parent.pk }}</p>	
+		<p>{{ active_parent }}</p>
+	</li>
+
+{% elif not do_draw %}
+	<li>
+		<a href='{% if menu_item.url != "" %}{{ menu_item.url }}{% else %}{% url menu_item.named_url %}{% endif %}?active-menu={{ menu.name }}&level={{ menu_item.level }}&rank={{ menu_item.rank }}&parent={{ menu_item.parent.pk }}'>{{ menu_item.caption }}</a>
+		<p>{{ do_draw }}</p>
+		<p>{{ menu_item.has_children }}</p>
+		<p>{{ menu_item.parent.pk }}</p>	
+		<p>{{ active_parent }}</p>
+	</li>
+
+{% endif %} -->
