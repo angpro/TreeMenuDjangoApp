@@ -1,6 +1,6 @@
 # TreeMenuDjangoApp
 
-TreeMenuDjangoApp is a Django app to draw a tree menu. This app could be used in more complex projects.
+TreeMenuDjangoApp is a Django app to draw a tree menu with basic frontend. This app could be used in more complex projects.
 
 ## Installation
 
@@ -20,9 +20,7 @@ Run the app as a standard Django project.
 * Active item determined through the active link.
 * There could be any number of tree menus on one page.
 * Only one request to the data base.
-
-Under development: 
-* Expanding menu items based on the selected item with Java Script. Now only the upper level is drawn by default.
+* Expanding menu items based on the selected item: all items above are expanded and all siblings are expanded.
 
 ## Notes
 
